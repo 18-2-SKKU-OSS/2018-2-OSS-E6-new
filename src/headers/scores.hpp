@@ -29,6 +29,7 @@ private:
   void padding(std::string name);
 
 public:
+  ull playsize{0};
   ull score = 0;
   bool win;
   ull largestTile;
