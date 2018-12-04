@@ -396,6 +396,7 @@ void Game::saveStats() const {
 
 void Game::saveScore() const {
   Scoreboard s;
+  s.playsize = gamePlayBoard.getPlaySize();
   s.score = gamePlayBoard.score;
   s.win = gamePlayBoard.hasWon();
   s.moveCount = gamePlayBoard.MoveCount();
@@ -460,6 +461,7 @@ void Game::playGame(ContinueStatus cont) {
   auto finishTime = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> elapsed = finishTime - startTime;
   duration = elapsed.count();
+
   std::ostringstream str_os;
   if (gamePlayBoard.hasWon()) {
     str_os << win_richtext.str();
@@ -468,8 +470,7 @@ void Game::playGame(ContinueStatus cont) {
   }
   std::cout << str_os.str();
 
-  if (gamePlayBoard.getPlaySize() == COMPETITION_GAME_BOARD_PLAY_SIZE &&
-      cont == ContinueStatus::STATUS_END_GAME) {
+  if(cont == ContinueStatus::STATUS_END_GAME) {
     statistics();
     saveStats();
     newline(2);
@@ -500,7 +501,7 @@ void Game::playGame(ContinueStatus cont) {
     exit(EXIT_SUCCESS);
   }
 
-  
+
 
   switch(c){
     case '1':
