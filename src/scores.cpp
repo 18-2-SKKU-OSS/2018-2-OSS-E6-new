@@ -26,7 +26,7 @@ void Scoreboard::writeToFile() {
   scores.close();
 }
 
-void Scoreboard::printScore() {
+void Scoreboard::printScore(int boardsize) {
   constexpr auto no_save_text = "No saved scores.";
   const auto score_attributes_text = {
       "No.", "Name", "Score", "Won?", "Moves", "Largest Tile", "Duration"};
@@ -40,10 +40,9 @@ void Scoreboard::printScore() {
   constexpr auto score_title_text = "SCOREBOARD";
   constexpr auto divider_text = "──────────";
   constexpr auto sp = "  ";
-
   std::ostringstream str_os;
 
-  readFile();
+  readFile(boardsize);
 
   clearScreen();
   drawAscii();
@@ -101,7 +100,7 @@ void Scoreboard::printScore() {
   std::cout << str_os.str();
 }
 
-void Scoreboard::printStats() {
+void Scoreboard::printStats(int boardsize) {
   constexpr auto stats_title_text = "STATISTICS";
   constexpr auto divider_text = "──────────";
   constexpr auto header_border_text = "┌────────────────────┬─────────────┐";
@@ -115,7 +114,7 @@ void Scoreboard::printStats() {
 
   Stats stats;
   std::ostringstream stats_richtext;
-  if (stats.collectStatistics()) {
+  if (stats.collectStatistics(boardsize)) {
     constexpr auto num_of_stats_attributes_text = 5;
     auto data_stats = std::array<std::string, num_of_stats_attributes_text>{};
     data_stats = {
@@ -166,9 +165,9 @@ void Scoreboard::padding(std::string name) {
   }
 }
 
-void Scoreboard::readFile() {
-
-  std::ifstream scores("../data/scores.txt");
+void Scoreboard::readFile(int size) {
+  std::string file_dir = "../data/scores" + std::to_string(size) + ".txt";
+  std::ifstream scores(file_dir);
   if (scores.fail()) {
     return;
   }

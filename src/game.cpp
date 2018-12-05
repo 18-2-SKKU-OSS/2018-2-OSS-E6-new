@@ -375,7 +375,7 @@ void Game::statistics() const {
 
 void Game::saveStats() const {
   Stats stats;
-  stats.collectStatistics();
+  stats.collectStatistics(gamePlayBoard.getPlaySize());
   stats.bestScore = stats.bestScore < gamePlayBoard.score ?
                         gamePlayBoard.score :
                         stats.bestScore;
@@ -383,8 +383,8 @@ void Game::saveStats() const {
   stats.winCount = gamePlayBoard.hasWon() ? stats.winCount + 1 : stats.winCount;
   stats.totalMoveCount += gamePlayBoard.MoveCount();
   stats.totalDuration += duration;
-
-  std::fstream statistics("../data/statistics.txt");
+  std::string file_dir = "../data/statistics" + std::to_string(gamePlayBoard.getPlaySize()) + ".txt";
+  std::fstream statistics(file_dir);
   statistics << stats.bestScore << std::endl
              << stats.gameCount << std::endl
              << stats.winCount << std::endl
@@ -572,11 +572,11 @@ ull Game::setBoardSize() {
 void Game::startGame() {
 
   Stats stats;
-  if (stats.collectStatistics()) {
-    bestScore = stats.bestScore;
-  }
 
   ull userInput_PlaySize = setBoardSize();
+  if (stats.collectStatistics(userInput_PlaySize)) {
+    bestScore = stats.bestScore;
+  }
 
   gamePlayBoard = GameBoard(userInput_PlaySize);
   gamePlayBoard.addTile();
@@ -587,11 +587,10 @@ void Game::startGame() {
 void Game::continueGame() {
 
   Stats stats;
-  if (stats.collectStatistics()) {
-    bestScore = stats.bestScore;
-  }
-
   if (initialiseContinueBoardArray()) {
+    if (stats.collectStatistics(gamePlayBoard.getPlaySize())) {
+      bestScore = stats.bestScore;
+    }
     playGame(ContinueStatus::STATUS_CONTINUE);
   } else {
     noSave = true;

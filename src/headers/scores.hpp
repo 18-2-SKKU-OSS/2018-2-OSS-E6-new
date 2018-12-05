@@ -25,7 +25,7 @@ private:
   std::vector<Score> scoreList;
   void prompt();
   void writeToFile();
-  void readFile();
+  void readFile(int size);
   void padding(std::string name);
 
 public:
@@ -35,8 +35,8 @@ public:
   ull largestTile;
   long long moveCount;
   double duration;
-  void printScore();
-  void printStats();
+  void printScore(int boardsize);
+  void printStats(int boardsize);
   void save();
 };
 #endif
