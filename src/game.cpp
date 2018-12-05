@@ -384,7 +384,7 @@ void Game::saveStats() const {
   stats.totalMoveCount += gamePlayBoard.MoveCount();
   stats.totalDuration += duration;
   std::string file_dir = "../data/statistics" + std::to_string(gamePlayBoard.getPlaySize()) + ".txt";
-  std::fstream statistics(file_dir);
+  std::fstream statistics(file_dir,std::ios_base::app);
   statistics << stats.bestScore << std::endl
              << stats.gameCount << std::endl
              << stats.winCount << std::endl
