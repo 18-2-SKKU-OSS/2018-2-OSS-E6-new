@@ -3,7 +3,7 @@
 bool Stats::collectStatistics(int size) {
 
   std::string file_dir = "../data/statistics" + std::to_string(size) + ".txt";
-  std::ifstream statistics(file_dir);
+  std::fstream statistics(file_dir);
   if (statistics.fail()) {
     return false;
   }
