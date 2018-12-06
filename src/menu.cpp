@@ -84,6 +84,7 @@ void Menu::showScores() {
 
   int boardsize;
   clearScreen();
+  drawAscii();
   constexpr auto choose_playsize = "Enter the size of board : ";
   std::cout<<choose_playsize;
   std::cin>>boardsize;
