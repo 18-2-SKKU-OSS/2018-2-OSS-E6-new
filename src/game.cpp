@@ -529,7 +529,7 @@ ull Game::setBoardSize() {
   constexpr auto no_save_found_text =
       "No saved game found. Starting a new game.";
   constexpr auto board_size_prompt_text =
-      "Enter gameboard size (3x3 to 10x10): ";
+      "Enter gameboard size (3x3 to 10x10). If you want to go back, enter '0': ";
   constexpr auto sp = "  ";
 
   enum { MIN_GAME_BOARD_PLAY_SIZE = 3, MAX_GAME_BOARD_PLAY_SIZE = 10 };
@@ -570,6 +570,10 @@ ull Game::setBoardSize() {
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::int32_t>::max(), '\n');
     err = true;
+    if(userInput_PlaySize==0){
+      Menu menu;
+      menu.startMenu();
+    }
   }
   return userInput_PlaySize;
 }
