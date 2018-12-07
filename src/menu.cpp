@@ -82,12 +82,32 @@ void Menu::continueGame() {
 
 void Menu::showScores() {
 
-  int boardsize;
-  clearScreen();
-  drawAscii();
-  constexpr auto choose_playsize = "Enter the size of board : ";
-  std::cout<<choose_playsize;
-  std::cin>>boardsize;
+  int boardsize = 0;
+  constexpr auto choose_playsize = "Enter the size of board (3*3 to 10*10): ";
+    std::ostringstream str_os;
+  const auto invalid_prompt_text ={
+      "Invalid input. Gameboard size should range from ", " to ", "."};
+  std::ostringstream error_prompt_richtext;
+  error_prompt_richtext << red << std::begin(invalid_prompt_text)[0]
+                            << 3
+                            << std::begin(invalid_prompt_text)[1]
+                            << 10
+                            << std::begin(invalid_prompt_text)[2] << def << "\n\n";
+  std::ostringstream board_size_prompt_richtext;
+  board_size_prompt_richtext << bold_on << " " << choose_playsize<< bold_off;
+ bool err = false;
+  while(boardsize < 3 || boardsize > 10){
+    clearScreen();
+    drawAscii();
+    if(err)
+      str_os << error_prompt_richtext.str();
+    str_os << board_size_prompt_richtext.str();
+    std::cout << str_os.str();
+    std::cin >> boardsize;
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::int32_t>::max(), '\n');
+    err = true;
+  }
   Scoreboard s;
   s.printScore(boardsize);
   s.printStats(boardsize);
