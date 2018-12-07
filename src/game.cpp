@@ -529,7 +529,7 @@ ull Game::setBoardSize() {
   constexpr auto no_save_found_text =
       "No saved game found. Starting a new game.";
   constexpr auto board_size_prompt_text =
-      "Enter gameboard size (NOTE: Scores and statistics will be saved only for the 4x4 gameboard): ";
+      "Enter gameboard size (3x3 to 10x10): ";
   constexpr auto sp = "  ";
 
   enum { MIN_GAME_BOARD_PLAY_SIZE = 3, MAX_GAME_BOARD_PLAY_SIZE = 10 };
