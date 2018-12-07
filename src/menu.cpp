@@ -1,5 +1,5 @@
 #include "menu.hpp"
-
+//
 void Menu::startMenu(int err) {
   constexpr auto greetings_text = "Welcome to ";
   constexpr auto gamename_text = "2048!";
