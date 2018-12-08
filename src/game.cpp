@@ -460,8 +460,6 @@ void Game::playGame(ContinueStatus cont) {
     if (stateSaved) {
       str_os << state_saved_richtext.str();
       stateSaved = false;
-    //  Menu menu;
-    //  menu.startMenu();
     }
     std::cout << str_os.str();
     input();
