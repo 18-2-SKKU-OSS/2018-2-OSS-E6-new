@@ -37,7 +37,7 @@ enum {
 };
 
 enum { CODE_HOTKEY_ACTION_SAVE = 'Z', CODE_HOTKEY_ALTERNATE_ACTION_SAVE = 'P' };
-
+enum {CODE_RETURN_MENU = 'M'};
 } // namespace Code
 } // namespace Keypress
 
@@ -246,17 +246,16 @@ void Game::input(KeyInputErrorStatus err) {
   S or J or ↓ => Down
   D or L or → => Right
   Z or P => Save
+  M => Back to Menu
 
   Press the keys to start and continue.
 
 )";
-
   constexpr auto invalid_prompt_text = "Invalid input. Please try again.";
   constexpr auto sp = "  ";
   std::ostringstream str_os;
   std::ostringstream invalid_prompt_richtext;
   invalid_prompt_richtext << red << sp << invalid_prompt_text << def << "\n\n";
-
   str_os << input_commands_text;
 
   if (err == KeyInputErrorStatus::STATUS_INPUT_ERROR) {
@@ -312,6 +311,10 @@ void Game::input(KeyInputErrorStatus err) {
   case CODE_HOTKEY_ALTERNATE_ACTION_SAVE:
     saveState();
     stateSaved = true;
+    break;
+  case CODE_RETURN_MENU:
+    Menu menu;
+    menu.startMenu();
     break;
   default:
     drawBoard();
@@ -457,6 +460,8 @@ void Game::playGame(ContinueStatus cont) {
     if (stateSaved) {
       str_os << state_saved_richtext.str();
       stateSaved = false;
+    //  Menu menu;
+    //  menu.startMenu();
     }
     std::cout << str_os.str();
     input();
