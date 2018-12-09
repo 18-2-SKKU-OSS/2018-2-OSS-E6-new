@@ -498,6 +498,7 @@ void Game::playGame(ContinueStatus cont) {
 
   std::ostringstream choice_richtext;
   choice_richtext << "  " << choice_text;
+  str_os1 << "\n";
   str_os1 << choice_richtext.str();
   str_os1 << finish_entry_text;
   std::cout<<str_os1.str();
