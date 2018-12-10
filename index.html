@@ -53,7 +53,7 @@
 <!--
   START MODULE AREA 2: Page Title 1
 -->
-  <section>
+  <section id = top>
     <div data-layout="_r">
       <div data-layout="al16">
         <h1>2018-2-OSS-E6</h1>
@@ -153,10 +153,13 @@ END MODULE AREA 3: Menu 1
 <!--
   START MODULE AREA 4: Text | Text
 -->
+<div data-layout="_r">
+    <div data-layout="ch-half">
+      <a href = "#teamIntro" class = "link">[팀원 소개]</a> <a href = "#projectIntro">[프로젝트 소개]</a></div></div>
 <section>
   <div data-layout="_r">
     <div data-layout="ch-half">
-      <p><b>&lt;팀원 소개&gt;</b></p>
+      <p id = teamIntro><b>&lt;팀원 소개&gt;</b></p>
     </div>
     <div data-layout="ch-half">
       <p><b>이름</b> :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 윤혜진
@@ -208,7 +211,7 @@ END MODULE AREA 3: Menu 1
  <hr width = 80%, size = 10px, color = black>
  <div data-layout="_r">
   <div data-layout="ch-half">
-    <p><b>&lt;프로젝트 소개&gt;</b></p>
+    <p id = projectIntro><b>&lt;프로젝트 소개&gt;</b></p>
     <p>
       <b>[2048.cpp]</b>
       <br/>원본 repository: <a href="https://github.com/plibither8/2048.cpp">https://github.com/plibither8/2048.cpp</a>
@@ -222,6 +225,7 @@ END MODULE AREA 3: Menu 1
     </p>
   </div></div>
   
+<div><a href ="#top"><img src="assets/top.png" width = 50px height = 50px align="right" hspace="200" vspace="20"></a></div>
 <!--
   END MODULE AREA 4: Text | Text
 -->
