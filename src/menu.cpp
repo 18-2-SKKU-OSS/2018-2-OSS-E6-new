@@ -192,7 +192,7 @@ void Menu::showScores() {
   std::ostringstream str_os;
   std::ostringstream board_size_prompt_richtext;
   if(language==1){
-    constexpr auto choose_playsize = "Enter the size of board (3to 10). If you want to go back, enter '0': ";
+    constexpr auto choose_playsize = "Enter the size of board (3 to 10). If you want to go back, enter '0': ";
     const auto invalid_prompt_text ={
       "Invalid input. Gameboard size should range from ", " to ", "."};
     error_prompt_richtext << red << std::begin(invalid_prompt_text)[0]
@@ -203,7 +203,7 @@ void Menu::showScores() {
     board_size_prompt_richtext << bold_on << " " << choose_playsize<< bold_off;
   }
   if(language==2){
-    constexpr auto choose_playsize = "보드 사이즈를 입력하세요(3에서 10). 메뉴로 돌아가시길 원한다면, '0'을 입력하세요: ";
+    constexpr auto choose_playsize = "보드 사이즈를 입력하세요(3 에서 10). 메뉴로 돌아가시길 원한다면, '0'을 입력하세요: ";
     const auto invalid_prompt_text ={
       "잘못된 입력입니다. 게임보드 사이즈는 ","에서 ", "까지입니다."};
     error_prompt_richtext << red << std::begin(invalid_prompt_text)[0]
