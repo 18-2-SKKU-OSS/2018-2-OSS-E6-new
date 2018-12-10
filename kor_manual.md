@@ -90,6 +90,7 @@ $ ./2048
 <img  src="https://user-images.githubusercontent.com/29089484/49750858-521fd000-fcef-11e8-84bc-b9a116064531.PNG">
 6. Exit
     -게임을 종료합니다.
+    
 ## Notes
 
 `[GameBoard].getTile(2,0)`: x = 0, y = 2 인 해당 예시는 두 번째 행의 0번째 타일(열)을 의미합니다.
