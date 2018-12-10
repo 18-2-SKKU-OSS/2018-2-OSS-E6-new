@@ -1,6 +1,8 @@
 #include "game.hpp"
 #include "menu.hpp"
 
+extern int language;
+
 namespace {
 namespace Keypress {
 namespace Code {

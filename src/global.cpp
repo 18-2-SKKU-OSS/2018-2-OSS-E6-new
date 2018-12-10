@@ -1,6 +1,8 @@
 #include "global.hpp"
 #include <sstream>
 
+extern int language;
+
 #ifdef _WIN32
 
 void getInput(char &c) {

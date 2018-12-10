@@ -1,5 +1,7 @@
 #include <gameboard.hpp>
 
+extern int language;
+
 namespace {
 std::string drawTileString(Tile currentTile) {
   std::ostringstream tile_richtext;

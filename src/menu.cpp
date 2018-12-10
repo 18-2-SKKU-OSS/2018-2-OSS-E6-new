@@ -1,5 +1,7 @@
 #include "menu.hpp"
 
+int language;
+
 void Menu::selectLanguage(int err){
   constexpr auto greeting_text = "Welcome to ";
   constexpr auto gamename_text = "2048!";
@@ -54,9 +56,11 @@ void Menu::input_language(int err) {
 
   switch (c) {
   case '1':
+    language = 1;
     startMenu(0);
     break;
   case '2':
+    language = 2;
     startMenu(0);
     break;
   default:

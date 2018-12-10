@@ -1,5 +1,7 @@
 #include "scores.hpp"
 
+extern int language;
+
 bool compare(const Score &a, const Score &b) {
   return a.score < b.score;
 };
