@@ -1,5 +1,71 @@
 #include "menu.hpp"
 
+void Menu::selectLanguage(int err){
+  constexpr auto greeting_text = "Welcome to ";
+  constexpr auto gamename_text = "2048!";
+  constexpr auto sp = " ";
+
+  constexpr auto select_text = "Select Your Language";
+  constexpr auto eng_text = "1. English";
+  constexpr auto kor_text = "2. Korean";
+
+  std::ostringstream str_os1;
+  std::ostringstream title_richtext;
+  title_richtext << bold_on << sp << greeting_text << blue << gamename_text
+                << def << bold_off << "\n\n";
+
+  std::ostringstream language_richtext;
+  language_richtext << bold_on << sp << select_text << "\n" 
+                    << "   " << blue << eng_text << "  " << blue << kor_text << bold_off << "\n\n";
+
+  clearScreen();
+  drawAscii();
+  str_os1 << title_richtext.str();
+  str_os1 << language_richtext.str();
+  std::cout << str_os1.str();
+
+  input_language(err);
+}
+
+void Menu::input_language(int err) {
+  constexpr auto err_input_text = "Invalid input. Please try again.";
+  constexpr auto prompt_choice_text = "Enter Choice: ";
+  constexpr auto sp = "  ";
+
+  std::ostringstream str_os;
+  std::ostringstream err_input_richtext;
+  err_input_richtext << red << sp << err_input_text << def << "\n\n";
+  std::ostringstream prompt_choice_richtext;
+  prompt_choice_richtext << sp << prompt_choice_text;
+
+  if (err) {
+    str_os << err_input_richtext.str();
+  }
+
+  str_os << prompt_choice_richtext.str();
+  std::cout << str_os.str();
+  char c;
+  std::cin >> c;
+
+  if (std::cin.eof()) {
+    std::cout << std::endl;
+    exit(EXIT_SUCCESS);
+  }
+
+  switch (c) {
+  case '1':
+    startMenu(0);
+    break;
+  case '2':
+    startMenu(0);
+    break;
+  default:
+    selectLanguage(1);
+    break;
+  }
+}
+
+
 void Menu::startMenu(int err) {
   constexpr auto greetings_text = "Welcome to ";
   constexpr auto gamename_text = "2048!";

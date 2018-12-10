@@ -3,7 +3,7 @@
 int main() {
 
   Menu menu;
-  menu.startMenu();
+  menu.selectLanguage();
 
   return EXIT_SUCCESS;
 }
