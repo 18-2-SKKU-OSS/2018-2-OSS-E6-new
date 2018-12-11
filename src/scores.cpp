@@ -253,7 +253,7 @@ void Scoreboard::printStats(int boardsize) {
     "성공 횟수", "전체 이동",
     "전체 시간"};
     constexpr auto no_save_text = "저장된 통계가 없습니다.";
-    constexpr auto any_key_exit_text = "키보드를 입력하면 메뉴로 돌아갑니다.: ";
+    constexpr auto any_key_exit_text = "키보드를 입력하면 메뉴로 돌아갑니다: ";
     constexpr auto sp = "  ";
 
     Stats stats;
