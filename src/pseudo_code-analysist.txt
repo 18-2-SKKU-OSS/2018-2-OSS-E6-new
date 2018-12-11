@@ -1,0 +1,33 @@
+***since this is pseudo code_analysis, this contains only the main stream.
+
+excute 2048.cpp
+
+excute menu.selectLanguage(); -> excutes input_language(), select English or Korean.
+excute startMenu()-> print out start phrases, print out main menus, and gets input from user.
+
+3 ways differ by input received at startMenu() function.
+
+1) excute  menu.startgame()
+	excute game.startgame
+	- excute gameBoard.addTIle(), creating gameboard which we will play on.
+	- excute game by excuting playGame(status_end_game)
+	- when user saves the game, excute statistics(), saveScore(), saveStats().
+	- when the game is over or saved, receive input from user.
+	- depending on input, the program proceeds with 3 3tatus.
+		1. excute startGame(status_end_game), going back to first case of startMenu()
+		2. excute startMenu(), going back to main menu screen
+		3. excute exit() function, terminate the program.
+
+2) excute menu.continuegame()
+	excute game.continuegame()
+	- excute stats.collectStatistics(gamePlayBoard.getplaySize()) and get the board size of previous game that is not ended yet.
+	- exute playgame(status_continue)
+	- if there is no saved status, excute startGame().
+
+3) menu.showscores
+	receive boardsizeinput, decide which boardsize-game score to show
+	excute scoreboard.printscore(), print out numver, name, score, success, moves, biggest tile, time.
+	excute scoreboard.printstats(), print out best score, games played, success number, entire moves, entire time.
+
+4)exit
+	if the value of input is not one of '1,2,3,4', goes back to startMenu().
