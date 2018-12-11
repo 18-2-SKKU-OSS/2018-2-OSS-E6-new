@@ -12,6 +12,22 @@
     <img align="center" alt="2048 in action!" src="assets/demo.gif"></img>
 </p>
 
+##2018-2-OSS-E6 팀 소개
+
+```bash
+윤혜진 / 2017311666 / yhjsoar / yhjsoar5@gmail.com
+Roll : 조장, github page 생성, menu.cpp 한글화 및 한글 메뉴 생성, 게임 종료 후 뒤로가기 구현, 한글 스코어 오류 수정
+이지환 / 2014312411 / hwan3526 / wlghks3526@naver.com
+Roll : 스코어보드, 스코어보드 진입시 사이즈 입력, 게임 시작시 사이즈 입력 부분에서 메뉴로 돌아갈 수 있도록 코드 수정, game.cpp 한글화
+윤재한 / 2017314561 / yjh1534 / dbswogks1534@naver.com
+Roll : scores, statistics모든 사이즈 저장 관련 코드 수정, 메뉴얼.md 한글판 작성, scores.cpp 한글화, ReadMe.md 수정
+이인수 / 2017314655 / Leeinsu1 / leeinsu123@naver.com
+Roll : 이슈관리, 게임에러확인, 코드수정, cmake 메뉴얼작성, 발표준비
+함수민 / 2017314317 / sumin8861 / sumin8861@hanmail.net
+Roll : 이슈관리, 게임에러확인, 코드분석, 발표, 발표준비
+```
+
+
 ## Setup
 
 이 게임과 코드는 GNU/Linux 와 macOS 플랫폼에서 작동되도록 만들어졌지만, Windows에서의 호환성 또한 추가되었습니다.
@@ -90,7 +106,7 @@ $ ./2048
 <img  src="https://user-images.githubusercontent.com/29089484/49750858-521fd000-fcef-11e8-84bc-b9a116064531.PNG">
 6. Exit
     -게임을 종료합니다.
-    
+
 ## Notes
 
 `[GameBoard].getTile(2,0)`: x = 0, y = 2 인 해당 예시는 두 번째 행의 0번째 타일(열)을 의미합니다.
