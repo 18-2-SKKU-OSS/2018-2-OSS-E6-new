@@ -17,7 +17,7 @@ void Menu::selectLanguage(int err){
                 << def << bold_off << "\n\n";
 
   std::ostringstream language_richtext;
-  language_richtext << bold_on << sp << select_text << "\n" 
+  language_richtext << bold_on << sp << select_text << "\n"
                     << "   " << blue << eng_text << "  " << blue << kor_text << bold_off << "\n\n";
 
   clearScreen();
@@ -82,13 +82,13 @@ void Menu::startMenu(int err) {
   }
   if(language == 2) {
     constexpr auto greetings_text = "에 오신 것을 환영합니다!";
-    title_richtext << bold_on << sp << blue << gamename_text << def << greetings_text 
+    title_richtext << bold_on << sp << blue << gamename_text << def << greetings_text
                   << bold_off << "\n";
   }
 
-  
 
-  
+
+
 
   clearScreen();
   drawAscii();
@@ -116,12 +116,12 @@ void Menu::startMenu(int err) {
     str_os << menu_entry_text;
     std::cout << str_os.str();
   }
-  
+
   input(err);
 }
 
 void Menu::input(int err) {
-  
+
   constexpr auto sp = "  ";
 
   std::ostringstream str_os;
@@ -139,7 +139,7 @@ void Menu::input(int err) {
     err_input_richtext << red << sp << err_input_text << def << "\n\n";
     prompt_choice_richtext << sp << prompt_choice_text;
   }
-  
+
 
   if (err) {
     str_os << err_input_richtext.str();
@@ -187,12 +187,12 @@ void Menu::continueGame() {
 void Menu::showScores() {
 
   int boardsize = 0;
- 
+
   std::ostringstream error_prompt_richtext;
   std::ostringstream str_os;
   std::ostringstream board_size_prompt_richtext;
   if(language==1){
-    constexpr auto choose_playsize = "Enter the size of board (3to 10). If you want to go back, enter '0': ";
+    constexpr auto choose_playsize = "Enter the size of board (3 to 10). If you want to go back, enter '0': ";
     const auto invalid_prompt_text ={
       "Invalid input. Gameboard size should range from ", " to ", "."};
     error_prompt_richtext << red << std::begin(invalid_prompt_text)[0]
@@ -213,8 +213,8 @@ void Menu::showScores() {
                             << std::begin(invalid_prompt_text)[2] << def << "\n\n";
     board_size_prompt_richtext << bold_on << " " << choose_playsize<< bold_off;
   }
-  
-  
+
+
  bool err = false;
   while(boardsize < 3 || boardsize > 10){
     clearScreen();
