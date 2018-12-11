@@ -96,44 +96,44 @@ END MODULE AREA 1: Blog Article
 START MODULE AREA 3: Menu 1
 -->
 <section class="MOD_MENU" data-theme="_bgp">
-  <div data-layout="_r" class="nopadding">
-    <nav class="MOD_MENU_Nav">
-      <p class="MOD_MENU_Title">Menu</p>
-      <svg class="MOD_MENU_Button" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
-        <rect width="30" height="6"/>
-        <rect y="24" width="30" height="6"/>
-        <rect y="12" width="30" height="6"/>
-      </svg>
-      <ul class="AP_Menu_List">
-        <li>
-          <a href="index.html" data-theme="_bgp">Home</a>
-        </li>
-        <li>
-          <a href="issue.html" data-theme="_bgp">Issue</a>
-          <ul>
-            <li>
-              <a href="issue_1.html" data-theme="_bgpd">Open Issues</a>
-            </li>
-            <li>
-              <a href="issue_2.html" data-theme="_bgpd">Closed Issues</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-            <a href="wiki.html" data-theme="_bgp">Wiki</a>
+    <div data-layout="_r" class="nopadding">
+      <nav class="MOD_MENU_Nav">
+        <p class="MOD_MENU_Title">Menu</p>
+        <svg class="MOD_MENU_Button" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+          <rect width="30" height="6"/>
+          <rect y="24" width="30" height="6"/>
+          <rect y="12" width="30" height="6"/>
+        </svg>
+        <ul class="AP_Menu_List">
+          <li>
+            <a href="index.html" data-theme="_bgp">Home</a>
+          </li>
+          <li>
+            <a href="issue.html" data-theme="_bgp">Issue</a>
             <ul>
               <li>
-                <a href="wiki_1.html" data-theme="_bgpd">활동내용</a>
+                <a href="issue_1.html" data-theme="_bgpd">Open Issues</a>
               </li>
               <li>
-                <a href="wiki_2.html" data-theme="_bgpd">기타 wiki</a>
+                <a href="issue_2.html" data-theme="_bgpd">Closed Issues</a>
               </li>
             </ul>
           </li>
-      </ul>
-    </nav>
-  </div>
-</section>
+          <li>
+              <a href="wiki.html" data-theme="_bgp">Wiki</a>
+              <ul>
+                <li>
+                  <a href="wiki_1.html" data-theme="_bgpd">활동내용</a>
+                </li>
+                <li>
+                  <a href="wiki_2.html" data-theme="_bgpd">기타 wiki</a>
+                </li>
+              </ul>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 <!--
 END MODULE AREA 3: Menu 1
 -->
@@ -202,19 +202,16 @@ END MODULE AREA 3: Menu 1
   <div data-layout="ch-half">
     <p id = projectIntro><b>&lt;프로젝트 소개&gt;</b></p>
     <p>
-      <b>[2048.cpp]</b>
-      <br/>원본 repository: <a href="https://github.com/plibither8/2048.cpp">https://github.com/plibither8/2048.cpp</a>
-      <br/><br/>Terminal version of the game "2048" written in C++.
-      <img src = "assets/demo.gif">
-      <br/>c++로 구현한 2048 game의 terminal version
-      <br/><br/><a href = "https://github.com/18-2-SKKU-OSS/2018-2-OSS-E6-new/blob/master/README.md">README.md</a>
-    </p>
-    <p>
-      <br/><b>[프로젝트 목표]</b>
-      <br/>2048게임을 플레이해보고 개선할 점을 찾아 수정하여 게임하기 더 편한 환경으로 만듦.
-    </p>
+      <br/><b>[프로젝트 기여]</b>
+      <br/><br/><br/><font class="subheading">게임 점수확인, 게임 시작 시 예외 처리</font>
+      <br/><br/>범위 외의 숫자를 입력할 경우 다시 입력하도록 수정
+      <br/><br/><img src="assets/13.png">
+      <br/><br/><br/><font class="subheading">저장된 기록이 없는데 continue를 할 시에 에러가 뜨는 현상 해결</font>
+      <br/><br/>previous game 관련 파일이 commit할 때 잘못 들어가서 생긴 현상이었음
+      <br/>→ data 폴더에서 관련 파일들을 삭제함
       <br/><br/>
-      <a href = "index_project1.html#projectIntro"><img src = "assets/next.png"  style="width: 50px; height:auto;" align = "right"></a>
+      <a href = "index_project9.html#projectIntro"><img src = "assets/prev.png"  style="width: 50px; height:auto;"></a>
+      <br/>
     </p>
   </div></div>
   

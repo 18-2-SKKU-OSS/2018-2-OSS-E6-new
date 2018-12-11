@@ -202,19 +202,13 @@ END MODULE AREA 3: Menu 1
   <div data-layout="ch-half">
     <p id = projectIntro><b>&lt;프로젝트 소개&gt;</b></p>
     <p>
-      <b>[2048.cpp]</b>
-      <br/>원본 repository: <a href="https://github.com/plibither8/2048.cpp">https://github.com/plibither8/2048.cpp</a>
-      <br/><br/>Terminal version of the game "2048" written in C++.
-      <img src = "assets/demo.gif">
-      <br/>c++로 구현한 2048 game의 terminal version
-      <br/><br/><a href = "https://github.com/18-2-SKKU-OSS/2018-2-OSS-E6-new/blob/master/README.md">README.md</a>
-    </p>
-    <p>
-      <br/><b>[프로젝트 목표]</b>
-      <br/>2048게임을 플레이해보고 개선할 점을 찾아 수정하여 게임하기 더 편한 환경으로 만듦.
-    </p>
+      <br/><b>[프로젝트 기여]</b>
+      <br/><br/><font class ="subheading">저장했던 게임을 continue했을 시 점수가 저장이 되지 않는 현상 발견</font>
+      <br/>게임을 저장할 경우 txt 파일로 출력하여 저장해두는데, 저장한 파일의 수정이 쉬워 저장해둔 게임의 점수를 scoreboard에 올릴 경우 쉽게 고득점을 할 수 있음. 이런 행위를 방지하기 위하여 저장했던 게임을 continue하면 점수를 저장할 수 없도록 함. 이를 해결하려면 저장한 데이터를 서버와 같이 다른 곳에 보관하거나 파일을 열어볼 수 없도록 하는 방법이 있음.
+      <br/><br/>첫번째 방법의 경우는 현실적으로 불가능한 방법이라고 판단하였고, 두번째 방법의 경우, 파일을 저장할 때 읽기전용으로 저장한다고 하여도 Linux에서 직접 파일 권한을 수정할 수 있기에 의미가 없다고 판단하였습니다.
       <br/><br/>
-      <a href = "index_project1.html#projectIntro"><img src = "assets/next.png"  style="width: 50px; height:auto;" align = "right"></a>
+      <a href = "index.html#projectIntro"><img src = "assets/prev.png"  style="width: 50px; height:auto;"></a>
+      <a href = "index_project2.html#projectIntro"><img src = "assets/next.png"  style="width: 50px; height:auto;" align = "right"></a>
     </p>
   </div></div>
   
