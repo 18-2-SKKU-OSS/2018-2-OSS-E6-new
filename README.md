@@ -14,7 +14,7 @@
 <img align="center" alt="2048 in action!" src="assets/demo.gif"></img>
 </p>
 
-##2018-2-OSS-E6 TEAM MEMBERS
+## 2018-2-OSS-E6 TEAM MEMBERS
 
 ```bash
 윤혜진 / 2017311666 / yhjsoar / yhjsoar5@gmail.com
@@ -32,6 +32,13 @@ Roll : 이슈관리, 게임에러확인, 코드분석, 발표, 발표준비
 ## github page
 [https://18-2-skku-oss.github.io/2018-2-OSS-E6-new/](https://18-2-skku-oss.github.io/2018-2-OSS-E6-new/)
 
+## pull request
+
+from [our 2048 repo](https://github.com/18-2-SKKU-OSS/2048.cpp/branches) 
+
+to [original 2048 repo](https://github.com/plibither8/2048.cpp)
+
+branch: KoreanGame(번역판), ScoresPullRequest(통계, 뒤로가기)
 
 ## Setup
 
