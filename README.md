@@ -29,6 +29,8 @@ Roll : 이슈관리, 게임에러확인, 코드수정, cmake 메뉴얼작성, �
 Roll : 이슈관리, 게임에러확인, 코드분석, 발표, 발표준비
 ```
 
+## github page
+[![Build Status(https://18-2-skku-oss.github.io/2018-2-OSS-E6-new/)]https://18-2-skku-oss.github.io/2018-2-OSS-E6-new/
 
 
 ## Setup
