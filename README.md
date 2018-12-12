@@ -40,7 +40,7 @@ to [original 2048 repo](https://github.com/plibither8/2048.cpp)
 
 branch: KoreanGame(번역판), ScoresPullRequest(통계, 뒤로가기)
 
-## Contributing
+## 코드 수정 사항
 
 * 한글판 게임 제작
 * 뒤로가기 구현
