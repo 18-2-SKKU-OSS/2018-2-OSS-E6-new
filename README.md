@@ -40,6 +40,14 @@ to [original 2048 repo](https://github.com/plibither8/2048.cpp)
 
 branch: KoreanGame(번역판), ScoresPullRequest(통계, 뒤로가기)
 
+## Contributing
+
+* 한글판 게임 제작
+* 뒤로가기 구현
+* 게임 중 메뉴로 돌아가는 기능 구현
+* 한글 기록 관련 표 밀림 현상 수정
+* 보다 자세한 사항은 [github page](https://18-2-skku-oss.github.io/2018-2-OSS-E6-new/)의 Home-<프로젝트 소개>를 참고
+
 ## Setup
 
 The game and code is made to run natively on the GNU/Linux and macOS platforms, but cross-platform compatibility for Windows has been added too.
